@@ -1,2 +1,2 @@
-# Javascript-Game-Bridge
-A poker bridge game coded with HTML and Javascipt
+"title": "Bridge Game"
+"site": "https://bridge-game-el38.surge.sh/"

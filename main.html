@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Eric Lin">
+    <title>It's A Game!!</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="game.css">
+</head>
+<body>
+    <div id="first" class="first">
+        <div class="teammateArea initial">
+            <label>Teammate</label>
+            <div id="Teammate" class="teammate">
+                <button id="Teammate1" class="card"></button>
+                <button id="Teammate2" class="card"></button>
+                <button id="Teammate3" class="card"></button>
+                <button id="Teammate4" class="card"></button>
+                <button id="Teammate5" class="card"></button>
+                <button id="Teammate6" class="card"></button>
+                <button id="Teammate7" class="card"></button>
+                <button id="Teammate8" class="card"></button>
+                <button id="Teammate9" class="card"></button>
+                <button id="Teammate10" class="card"></button>
+                <button id="Teammate11" class="card"></button>
+                <button id="Teammate12" class="card"></button>
+                <button id="Teammate13" class="card"></button>
+            </div>
+        </div>
+        <div class="scoreArea">
+            <div id="scoreAll" class="scoreAll">
+                <label id="score" class="score">Score: </label>
+                <label id="scoreNumber" class="score">0</label><br>
+                <label id="teamRoundWin" class="">Round Wins: </label>
+                <label id="teamRoundWinScore" class="">0</label><br>
+                <label id="computerStepIn" class="">Computer steps in: </label>
+                <label id="computerStepInAmount" class="">0</label>
+            </div>
+        </div>
+        <div class="boardArea">
+            <table id="scoreBoard" class="scoreBoard">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                        <th>Helped</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="second initial">
+        <div class="computer1Area">
+            <label>Computer 1</label>
+            <div id="Computer1" class="computer1">
+                <button id="Computer11" class="card rotation90"></button>
+                <button id="Computer12" class="card rotation90"></button>
+                <button id="Computer13" class="card rotation90"></button>
+                <button id="Computer14" class="card rotation90"></button>
+                <button id="Computer15" class="card rotation90"></button>
+                <button id="Computer16" class="card rotation90"></button>
+                <button id="Computer17" class="card rotation90"></button>
+                <button id="Computer18" class="card rotation90"></button>
+                <button id="Computer19" class="card rotation90"></button>
+                <button id="Computer110" class="card rotation90"></button>
+                <button id="Computer111" class="card rotation90"></button>
+                <button id="Computer112" class="card rotation90"></button>
+                <button id="Computer113" class="card rotation90"></button>
+            </div>
+        </div>
+        <div class="playTableArea">
+            <div class="king">
+                <label>Current King: </label>
+                <label id="king">Not Decided</label>
+            </div>
+
+            <div>
+                <canvas id="timeCountDownCanvas" width="100" height="10"></canvas>
+            </div>
+
+            <div id="playingHand" class="playingHand">
+                <div id="TeammateHand" class="card teammateHand"></div>
+                <div id="Computer1Hand" class="card computer1Hand"></div>
+                <div id="Computer2Hand" class="card computer2Hand"></div>
+                <div id="PlayerHand" class="card playerHand"></div>
+            </div>
+
+            <div id="blockRoundEndInput">
+                <div id="roundEndButtonBlock" class="roundEndButtonBlock">
+                    <input id="nextGame" type="button" class="button-king" value="Next Game"><br>
+                    <input id="saveGame" type="button" class="button-king" value="Save Game"><br>
+<!--                    <input id="endGame"  type="button" class="button-king" value="End Game">-->
+                </div>
+                <div id="saveDataBlock" class="invisible saveDataBlock">
+                    <input id="nameTextbox" type="text"><br>
+                    <input id="saveButton" type="button">
+                </div>
+            </div>
+
+            <div id="blockAuctionButton">
+                <div id="playTable" class="playTable">
+                    <h2 id="Choose">Choose a symbol for king</h2>
+                    <input id="button1" type="button" class="button-king" value="1 Clubs"><br>
+                    <input id="button2" type="button" class="button-king" value="1 Diamonds"><br>
+                    <input id="button3" type="button" class="button-king" value="1 Hearts"><br>
+                    <input id="button4" type="button" class="button-king" value="1 Spades"><br>
+                    <input id="button5" type="button" class="button-king" value="1 No Kings"><br>
+                    <input id="button6" type="button" class="button-king" value="Pass">
+                </div>
+            </div>
+
+        </div>
+        <div class="computer2Area">
+            <label>Computer 2</label>
+            <div id="Computer2" class="computer2">
+                <button id="Computer21" class="card rotation-90"></button>
+                <button id="Computer22" class="card rotation-90"></button>
+                <button id="Computer23" class="card rotation-90"></button>
+                <button id="Computer24" class="card rotation-90"></button>
+                <button id="Computer25" class="card rotation-90"></button>
+                <button id="Computer26" class="card rotation-90"></button>
+                <button id="Computer27" class="card rotation-90"></button>
+                <button id="Computer28" class="card rotation-90"></button>
+                <button id="Computer29" class="card rotation-90"></button>
+                <button id="Computer210" class="card rotation-90"></button>
+                <button id="Computer211" class="card rotation-90"></button>
+                <button id="Computer212" class="card rotation-90"></button>
+                <button id="Computer213" class="card rotation-90"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="third">
+        <div id="Player" class="player initial">
+            <p>Choose a card</p>
+            <button id="Player1" class="card"></button>
+            <button id="Player2" class="card"></button>
+            <button id="Player3" class="card"></button>
+            <button id="Player4" class="card"></button>
+            <button id="Player5" class="card"></button>
+            <button id="Player6" class="card"></button>
+            <button id="Player7" class="card"></button>
+            <button id="Player8" class="card"></button>
+            <button id="Player9" class="card"></button>
+            <button id="Player10" class="card"></button>
+            <button id="Player11" class="card"></button>
+            <button id="Player12" class="card"></button>
+            <button id="Player13" class="card"></button>
+        </div>
+        <div class="messageArea">
+            <div class="messageAll">
+                <label class="message">Message:</label><br>
+                <p id="messageBox" class="messageBox"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
